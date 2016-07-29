@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Baekjemuseum Tourist Statstics Input</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar-content1">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">관람객 통계</a>
+          </div>
+          <div class="collapse navbar-collapse" id="mynavbar-content1">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">입력</a></li>
+              <li><a href="#">보기</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="panel panel-success">
+        <!-- Default panel contents -->
+        <div class="panel-heading">일일 관람객 입력</div>
+        <div class="panel-body">
+          <p>일일 박물관 관람객 현황을 입력하여 주시기 바랍니다.</p>
+        </div>
+
+        <!-- Table -->
+        <div class="table-responsive">
+          <table id="inputTable" class="table table-bordered table-condensed">
+            <tr>
+              <th>시간대</th>
+              <th>소계</th>
+              <th>계</th>
+              <th>09-12시</th>
+              <th>12-14시</th>
+              <th>14-16시</th>
+              <th>16-18시</th>
+              <th>18-21시</th>
+            </tr>
+            <tr>
+              <td rowspan="3">합계</td>
+              <td>계</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>개인</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>단체</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td rowspan="3">어린이</td>
+              <td>계</td>
+              <td class="sumchildtotal"></td>
+              <td class="sumchild9"></td>
+              <td class="sumchild12"></td>
+              <td class="sumchild14"></td>
+              <td class="sumchild16"></td>
+              <td class="sumchild18"></td>
+            </tr>
+            <tr>
+              <td>개인</td>
+              <td class="total"></td>
+              <td><input type="text" class="child9 form-control " placeholder="값입력" /></td>
+              <td><input type="text" class="child12 form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="child14 form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="child16 form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="child18 form-control" placeholder="값입력"/></td>
+            </tr>
+            <tr>
+              <td>단체</td>
+              <td class="total"></td>
+              <td><input type="text" class="child9 form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="child12 form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="child14 form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="child16 form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="child18 form-control" placeholder="값입력"/></td>
+            </tr>
+
+            <tr>
+              <td rowspan="3">청소년</td>
+              <td>계</td>
+              <td class="total"></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>개인</td>
+              <td class="total"></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+            </tr>
+            <tr>
+              <td>단체</td>
+              <td class="total"></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+            </tr>
+            <tr>
+              <td rowspan="3">성인</td>
+              <td>계</td>
+              <td class="total"></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>개인</td>
+              <td class="total"></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+            </tr>
+            <tr>
+              <td>단체</td>
+              <td class="total"></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+            </tr>
+            <tr>
+              <td rowspan="3">경로</td>
+              <td>계</td>
+              <td class="total"></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>개인</td>
+              <td class="total"></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+            </tr>
+            <tr>
+              <td>단체</td>
+              <td class="total"></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+            </tr>
+            <tr>
+              <td rowspan="3">외국인</td>
+              <td>계</td>
+              <td class="total"></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>개인</td>
+              <td class="total"></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+            </tr>
+            <tr>
+              <td>단체</td>
+              <td class="total"></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="form-control" placeholder="값입력"/></td>
+            </tr>
+          </table>
+        </div>
+        <div class="panel-footer">
+          <button type="submit" class="btn btn-primary">등록</button>
+          <button type="submit" class="btn btn-warning">수정</button>
+          <button type="submit" class="pull-right btn btn-danger">삭제</button>
+        </div>
+      </div>
+  </div>
+  <script src="js/jquery-1.12.4.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script>
+  $(function () {
+      var tbl = $('#inputTable');
+      tbl.find('tr').each(function() {
+          $(this).find('input[type=text]').on("keyup", function() {
+              calculateSum();
+              calculateColumn();
+          });
+      });
+
+      function calculateSum() {
+        tbl.find('tr').each(function () {
+          var sum = 0;
+          $(this).find('input[type=text]').not('.total').each(function() {
+            if (!isNaN(this.value) && this.value.length != 0) {
+              sum += parseFloat(this.value);
+            }
+          });
+          $(this).find('.total').text(sum);
+        });
+      }
+
+      function calculateColumn() {
+        var columnSum = 0;
+        tbl.find("tr").each(function() {
+          var className = category + time;
+          $("className").each(function () {
+            if (!isNan(this.value) && this.value.length != 0) {
+              columnSum += parseFloat(this.value);
+            }
+          });
+        })
+        var writeTarget = "sum" + category + time;
+        $(this).find(".writeTarget").text(columnSum);
+      }
+  });
+  </script>
+
+
+</body>
+</html>
