@@ -86,33 +86,33 @@
               <td></td>
               <td></td>
             </tr>
-            <tr>
+            <tr class="child">
               <td rowspan="3">어린이</td>
               <td>계</td>
-              <td class="sumchildtotal"></td>
-              <td class="sumchild9"></td>
-              <td class="sumchild12"></td>
-              <td class="sumchild14"></td>
-              <td class="sumchild16"></td>
-              <td class="sumchild18"></td>
+              <td class="sumchild"></td>
+              <td class="sumchild"></td>
+              <td class="sumchild"></td>
+              <td class="sumchild"></td>
+              <td class="sumchild"></td>
+              <td class="sumchild"></td>
             </tr>
-            <tr>
+            <tr class="child">
               <td>개인</td>
               <td class="total"></td>
-              <td><input type="text" class="child9 form-control " placeholder="값입력" /></td>
-              <td><input type="text" class="child12 form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="child14 form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="child16 form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="child18 form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="child form-control " placeholder="값입력" /></td>
+              <td><input type="text" class="child form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="child form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="child form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="child form-control" placeholder="값입력"/></td>
             </tr>
-            <tr>
+            <tr class="child">
               <td>단체</td>
               <td class="total"></td>
-              <td><input type="text" class="child9 form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="child12 form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="child14 form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="child16 form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="child18 form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="child form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="child form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="child form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="child form-control" placeholder="값입력"/></td>
+              <td><input type="text" class="child form-control" placeholder="값입력"/></td>
             </tr>
 
             <tr>
@@ -240,15 +240,17 @@
   <script>
     var tbl = $('#inputTable');
     tbl.find('tr').each(function() {
-      $(this).find('input[type=text]').on("keyup", function() {
+      $(this).find('input[type=text]').on("keyup", function(event) {
+        //alert(event.target.classList[0]);
         calculateSum();
+        calculateColumn(event);
       });
     });
 
     function calculateSum() {
       tbl.find('tr').each(function () {
         var sum = 0;
-        $(this).find('input[type=text]').not('.total').each(function() {
+        $(this).find('input[type=text]').each(function() {
           if (!isNaN(this.value) && this.value.length != 0) {
             sum += parseFloat(this.value);
           }
@@ -257,18 +259,16 @@
       });
     }
 
-    function calculateColumn() {
-      var columnSum = 0;
-      tbl.find("tr").each(function() {
-        var className = category + time;
-        $("className").each(function () {
-          if (!isNan(this.value) && this.value.length != 0) {
-            columnSum += parseFloat(this.value);
-          }
+    function calculateColumn(event) {
+      $('#inputTable tr.child:not(:first):first td:has(".child")').each(function() {
+        var $td = $(this);
+        alert($td.index());
+        var colTotal = 0;
+        $('#inputTable tr.child:not(:first)').each(function() {
+          colTotal  += parseInt($(this).find('td:has(".child")').eq($td.index()).value, 10);
         });
-      })
-      var writeTarget = "sum" + category + time;
-      $(this).find(".writeTarget").text(columnSum);
+        $('#inputTable tr.child td.sumchild').eq($td.index()-1).html('T: ' + colTotal);
+      });
     }
   </script>
 </body>
