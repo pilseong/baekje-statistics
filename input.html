@@ -238,43 +238,38 @@
   <script src="js/jquery-1.12.4.min.js"></script>
   <script src="js/bootstrap.js"></script>
   <script>
-  $(function () {
-      var tbl = $('#inputTable');
-      tbl.find('tr').each(function() {
-          $(this).find('input[type=text]').on("keyup", function() {
-              calculateSum();
-              calculateColumn();
-          });
+    var tbl = $('#inputTable');
+    tbl.find('tr').each(function() {
+      $(this).find('input[type=text]').on("keyup", function() {
+        calculateSum();
       });
+    });
 
-      function calculateSum() {
-        tbl.find('tr').each(function () {
-          var sum = 0;
-          $(this).find('input[type=text]').not('.total').each(function() {
-            if (!isNaN(this.value) && this.value.length != 0) {
-              sum += parseFloat(this.value);
-            }
-          });
-          $(this).find('.total').text(sum);
+    function calculateSum() {
+      tbl.find('tr').each(function () {
+        var sum = 0;
+        $(this).find('input[type=text]').not('.total').each(function() {
+          if (!isNaN(this.value) && this.value.length != 0) {
+            sum += parseFloat(this.value);
+          }
         });
-      }
+        $(this).find('.total').text(sum);
+      });
+    }
 
-      function calculateColumn() {
-        var columnSum = 0;
-        tbl.find("tr").each(function() {
-          var className = category + time;
-          $("className").each(function () {
-            if (!isNan(this.value) && this.value.length != 0) {
-              columnSum += parseFloat(this.value);
-            }
-          });
-        })
-        var writeTarget = "sum" + category + time;
-        $(this).find(".writeTarget").text(columnSum);
-      }
-  });
+    function calculateColumn() {
+      var columnSum = 0;
+      tbl.find("tr").each(function() {
+        var className = category + time;
+        $("className").each(function () {
+          if (!isNan(this.value) && this.value.length != 0) {
+            columnSum += parseFloat(this.value);
+          }
+        });
+      })
+      var writeTarget = "sum" + category + time;
+      $(this).find(".writeTarget").text(columnSum);
+    }
   </script>
-
-
 </body>
 </html>
