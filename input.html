@@ -241,7 +241,6 @@
     var tbl = $('#inputTable');
     tbl.find('tr').each(function() {
       $(this).find('input[type=text]').on("keyup", function(event) {
-        //alert(event.target.classList[0]);
         calculateSum();
         calculateColumn(event);
       });
@@ -253,6 +252,7 @@
         $(this).find('input[type=text]').each(function() {
           if (!isNaN(this.value) && this.value.length != 0) {
             sum += parseFloat(this.value);
+            //alert(this);
           }
         });
         $(this).find('.total').text(sum);
@@ -260,14 +260,24 @@
     }
 
     function calculateColumn(event) {
-      $('#inputTable tr.child:not(:first):first td:has(".child")').each(function() {
+      $targetTRs = $('#inputTable tr.child:not(:first)');
+      $($targetTRs[0]).find('td:not(:first)').each(function() {
         var $td = $(this);
-        alert($td.index());
         var colTotal = 0;
-        $('#inputTable tr.child:not(:first)').each(function() {
-          colTotal  += parseInt($(this).find('td:has(".child")').eq($td.index()).value, 10);
+        var value = 0;
+
+        $targetTRs.each(function() {
+          $targetTDs = $(this).find('td:not(:first)');
+          if ($targetTDs.eq($td.index()-1).children().length > 0) {
+            value = parseInt($targetTDs.eq($td.index()-1).find('input[type=text]').get(0).value);
+          } else {
+            value = parseInt($targetTDs.eq($td.index()-1).html());
+          }
+          if (!isNaN(value) && value.length != 0) {
+            colTotal += value;
+          }
         });
-        $('#inputTable tr.child td.sumchild').eq($td.index()-1).html('T: ' + colTotal);
+        $('#inputTable tr.child td.sumchild').eq($td.index()-1).html(colTotal);
       });
     }
   </script>
