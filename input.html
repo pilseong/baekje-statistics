@@ -16,224 +16,222 @@
 </head>
 <body>
   <div class="container">
-    <div class="row">
-      <div class="navbar navbar-default">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar-content1">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">관람객 통계</a>
-          </div>
-          <div class="collapse navbar-collapse" id="mynavbar-content1">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">입력</a></li>
-              <li><a href="#">보기</a></li>
-            </ul>
-          </div>
+    <div class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar-content1">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">관람객 통계</a>
+        </div>
+        <div class="collapse navbar-collapse" id="mynavbar-content1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">입력</a></li>
+            <li><a href="#">보기</a></li>
+          </ul>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="panel panel-success">
-        <!-- Default panel contents -->
-        <div class="panel-heading">일일 관람객 입력</div>
-        <div class="panel-body">
-          <p>일일 박물관 관람객 현황을 입력하여 주시기 바랍니다.</p>
-        </div>
-
-        <!-- Table -->
-        <div class="table-responsive">
-          <table id="inputTable" class="table table-bordered table-condensed">
-            <tr>
-              <th>시간대</th>
-              <th>소계</th>
-              <th>계</th>
-              <th>09-12시</th>
-              <th>12-14시</th>
-              <th>14-16시</th>
-              <th>16-18시</th>
-              <th>18-21시</th>
-            </tr>
-            <tr>
-              <td rowspan="3">합계</td>
-              <td>계</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>개인</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>단체</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr class="child">
-              <td rowspan="3">어린이</td>
-              <td>계</td>
-              <td class="sumchild"></td>
-              <td class="sumchild"></td>
-              <td class="sumchild"></td>
-              <td class="sumchild"></td>
-              <td class="sumchild"></td>
-              <td class="sumchild"></td>
-            </tr>
-            <tr class="child">
-              <td>개인</td>
-              <td class="total"></td>
-              <td><input type="text" class="child form-control " placeholder="값입력" /></td>
-              <td><input type="text" class="child form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="child form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="child form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="child form-control" placeholder="값입력"/></td>
-            </tr>
-            <tr class="child">
-              <td>단체</td>
-              <td class="total"></td>
-              <td><input type="text" class="child form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="child form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="child form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="child form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="child form-control" placeholder="값입력"/></td>
-            </tr>
-
-            <tr>
-              <td rowspan="3">청소년</td>
-              <td>계</td>
-              <td class="total"></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>개인</td>
-              <td class="total"></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-            </tr>
-            <tr>
-              <td>단체</td>
-              <td class="total"></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-            </tr>
-            <tr>
-              <td rowspan="3">성인</td>
-              <td>계</td>
-              <td class="total"></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>개인</td>
-              <td class="total"></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-            </tr>
-            <tr>
-              <td>단체</td>
-              <td class="total"></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-            </tr>
-            <tr>
-              <td rowspan="3">경로</td>
-              <td>계</td>
-              <td class="total"></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>개인</td>
-              <td class="total"></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-            </tr>
-            <tr>
-              <td>단체</td>
-              <td class="total"></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-            </tr>
-            <tr>
-              <td rowspan="3">외국인</td>
-              <td>계</td>
-              <td class="total"></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>개인</td>
-              <td class="total"></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-            </tr>
-            <tr>
-              <td>단체</td>
-              <td class="total"></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-              <td><input type="text" class="form-control" placeholder="값입력"/></td>
-            </tr>
-          </table>
-        </div>
-        <div class="panel-footer">
-          <button type="submit" class="btn btn-primary">등록</button>
-          <button type="submit" class="btn btn-warning">수정</button>
-          <button type="submit" class="pull-right btn btn-danger">삭제</button>
-        </div>
+    <div class="panel panel-success">
+      <!-- Default panel contents -->
+      <div class="panel-heading">일일 관람객 입력</div>
+      <div class="panel-body">
+        <p>일일 박물관 관람객 현황을 입력하여 주시기 바랍니다.</p>
       </div>
+
+      <!-- Table -->
+      <div class="table-responsive">
+        <table id="inputTable" class="table table-bordered table-condensed">
+          <tr>
+            <th>시간대</th>
+            <th>소계</th>
+            <th>계</th>
+            <th>09-12시</th>
+            <th>12-14시</th>
+            <th>14-16시</th>
+            <th>16-18시</th>
+            <th>18-21시</th>
+          </tr>
+          <tr>
+            <td rowspan="3">합계</td>
+            <td>계</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>개인</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>단체</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="child">
+            <td rowspan="3">어린이</td>
+            <td>계</td>
+            <td class="sumchild"></td>
+            <td class="sumchild"></td>
+            <td class="sumchild"></td>
+            <td class="sumchild"></td>
+            <td class="sumchild"></td>
+            <td class="sumchild"></td>
+          </tr>
+          <tr class="child">
+            <td>개인</td>
+            <td class="total"></td>
+            <td><input type="text" class="child form-control " placeholder="값입력" /></td>
+            <td><input type="text" class="child form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="child form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="child form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="child form-control" placeholder="값입력"/></td>
+          </tr>
+          <tr class="child">
+            <td>단체</td>
+            <td class="total"></td>
+            <td><input type="text" class="child form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="child form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="child form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="child form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="child form-control" placeholder="값입력"/></td>
+          </tr>
+
+          <tr class="teenager">
+            <td rowspan="3">청소년</td>
+            <td>계</td>
+            <td class="sumteenager"></td>
+            <td class="sumteenager"></td>
+            <td class="sumteenager"></td>
+            <td class="sumteenager"></td>
+            <td class="sumteenager"></td>
+            <td class="sumteenager"></td>
+          </tr>
+          <tr class="teenager">
+            <td>개인</td>
+            <td class="total"></td>
+            <td><input type="text" class="teenager form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="teenager form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="teenager form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="teenager form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="teenager form-control" placeholder="값입력"/></td>
+          </tr>
+          <tr class="teenager">
+            <td>단체</td>
+            <td class="total"></td>
+            <td><input type="text" class="teenager form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="teenager form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="teenager form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="teenager form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="teenager form-control" placeholder="값입력"/></td>
+          </tr>
+          <tr class="adult">
+            <td rowspan="3">성인</td>
+            <td>계</td>
+            <td class="sumadult"></td>
+            <td class="sumadult"></td>
+            <td class="sumadult"></td>
+            <td class="sumadult"></td>
+            <td class="sumadult"></td>
+            <td class="sumadult"></td>
+          </tr>
+          <tr class="adult">
+            <td>개인</td>
+            <td class="total"></td>
+            <td><input type="text" class="adult form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="adult form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="adult form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="adult form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="adult form-control" placeholder="값입력"/></td>
+          </tr>
+          <tr class="adult">
+            <td>단체</td>
+            <td class="total"></td>
+            <td><input type="text" class="adult form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="adult form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="adult form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="adult form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="adult form-control" placeholder="값입력"/></td>
+          </tr>
+          <tr class="senior">
+            <td rowspan="3">경로</td>
+            <td>계</td>
+            <td class="sumsenior"></td>
+            <td class="sumsenior"></td>
+            <td class="sumsenior"></td>
+            <td class="sumsenior"></td>
+            <td class="sumsenior"></td>
+            <td class="sumsenior"></td>
+          </tr>
+          <tr class="senior">
+            <td>개인</td>
+            <td class="total"></td>
+            <td><input type="text" class="senior form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="senior form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="senior form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="senior form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="senior form-control" placeholder="값입력"/></td>
+          </tr>
+          <tr class="senior">
+            <td>단체</td>
+            <td class="total"></td>
+            <td><input type="text" class="senior form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="senior form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="senior form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="senior form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="senior form-control" placeholder="값입력"/></td>
+          </tr>
+          <tr class="foreigner">
+            <td rowspan="3">외국인</td>
+            <td>계</td>
+            <td class="sumforeigner"></td>
+            <td class="sumforeigner"></td>
+            <td class="sumforeigner"></td>
+            <td class="sumforeigner"></td>
+            <td class="sumforeigner"></td>
+            <td class="sumforeigner"></td>
+          </tr>
+          <tr class="foreigner">
+            <td>개인</td>
+            <td class="total"></td>
+            <td><input type="text" class="foreigner form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="foreigner form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="foreigner form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="foreigner form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="foreigner form-control" placeholder="값입력"/></td>
+          </tr>
+          <tr class="foreigner">
+            <td>단체</td>
+            <td class="total"></td>
+            <td><input type="text" class="foreigner form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="foreigner form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="foreigner form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="foreigner form-control" placeholder="값입력"/></td>
+            <td><input type="text" class="foreigner form-control" placeholder="값입력"/></td>
+          </tr>
+        </table>
+      </div>
+      <div class="panel-footer">
+        <button type="submit" class="btn btn-primary">등록</button>
+        <button type="submit" class="btn btn-warning">수정</button>
+        <button type="submit" class="pull-right btn btn-danger">삭제</button>
+      </div>
+    </div>
   </div>
   <script src="js/jquery-1.12.4.min.js"></script>
   <script src="js/bootstrap.js"></script>
@@ -260,7 +258,20 @@
     }
 
     function calculateColumn(event) {
-      $targetTRs = $('#inputTable tr.child:not(:first)');
+      $childTargetTRs = $('#inputTable tr.child:not(:first)');
+      setColumnValues($childTargetTRs, "child");
+      $teenagerTargetTRs = $('#inputTable tr.teenager:not(:first)');
+      setColumnValues($teenagerTargetTRs, "teenager");
+      $adultTargetTRs = $('#inputTable tr.adult:not(:first)');
+      setColumnValues($adultTargetTRs, "adult");
+      $seniorTargetTRs = $('#inputTable tr.senior:not(:first)');
+      setColumnValues($seniorTargetTRs, "senior");
+      $foreignerTargetTRs = $('#inputTable tr.foreigner:not(:first)');
+      setColumnValues($foreignerTargetTRs, "foreigner");
+
+    }
+
+    function setColumnValues($targetTRs, className) {
       $($targetTRs[0]).find('td:not(:first)').each(function() {
         var $td = $(this);
         var colTotal = 0;
@@ -277,7 +288,7 @@
             colTotal += value;
           }
         });
-        $('#inputTable tr.child td.sumchild').eq($td.index()-1).html(colTotal);
+        $('#inputTable tr.' + className + ' td.sum'+className).eq($td.index()-1).html(colTotal);
       });
     }
   </script>
