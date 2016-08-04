@@ -56,33 +56,33 @@
             <th>16-18시</th>
             <th>18-21시</th>
           </tr>
-          <tr>
+          <tr class="total">
             <td rowspan="3">합계</td>
             <td>계</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td class="sumtotal"></td>
+            <td class="sumtotal"></td>
+            <td class="sumtotal"></td>
+            <td class="sumtotal"></td>
+            <td class="sumtotal"></td>
+            <td class="sumtotal"></td>
           </tr>
-          <tr>
+          <tr class="total">
             <td>개인</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td class="rowtotal"></td>
+            <td class="total"></td>
+            <td class="total"></td>
+            <td class="total"></td>
+            <td class="total"></td>
+            <td class="total"></td>
           </tr>
-          <tr>
+          <tr class="total">
             <td>단체</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td class="rowtotal"></td>
+            <td class="total"></td>
+            <td class="total"></td>
+            <td class="total"></td>
+            <td class="total"></td>
+            <td class="total"></td>
           </tr>
           <tr class="child">
             <td rowspan="3">어린이</td>
@@ -96,7 +96,7 @@
           </tr>
           <tr class="child">
             <td>개인</td>
-            <td class="total"></td>
+            <td class="rowtotal"></td>
             <td><input type="text" class="child form-control input-sm" placeholder="값입력" /></td>
             <td><input type="text" class="child form-control input-sm" placeholder="값입력"/></td>
             <td><input type="text" class="child form-control input-sm" placeholder="값입력"/></td>
@@ -105,7 +105,7 @@
           </tr>
           <tr class="child">
             <td>단체</td>
-            <td class="total"></td>
+            <td class="rowtotal"></td>
             <td><input type="text" class="child form-control input-sm" placeholder="값입력"/></td>
             <td><input type="text" class="child form-control input-sm" placeholder="값입력"/></td>
             <td><input type="text" class="child form-control input-sm" placeholder="값입력"/></td>
@@ -125,7 +125,7 @@
           </tr>
           <tr class="teenager">
             <td>개인</td>
-            <td class="total"></td>
+            <td class="rowtotal"></td>
             <td><input type="text" class="teenager form-control input-sm" placeholder="값입력"/></td>
             <td><input type="text" class="teenager form-control input-sm" placeholder="값입력"/></td>
             <td><input type="text" class="teenager form-control input-sm" placeholder="값입력"/></td>
@@ -134,7 +134,7 @@
           </tr>
           <tr class="teenager">
             <td>단체</td>
-            <td class="total"></td>
+            <td class="rowtotal"></td>
             <td><input type="text" class="teenager form-control input-sm" placeholder="값입력"/></td>
             <td><input type="text" class="teenager form-control input-sm" placeholder="값입력"/></td>
             <td><input type="text" class="teenager form-control input-sm" placeholder="값입력"/></td>
@@ -153,7 +153,7 @@
           </tr>
           <tr class="adult">
             <td>개인</td>
-            <td class="total"></td>
+            <td class="rowtotal"></td>
             <td><input type="text" class="adult form-control input-sm" placeholder="값입력"/></td>
             <td><input type="text" class="adult form-control input-sm" placeholder="값입력"/></td>
             <td><input type="text" class="adult form-control input-sm" placeholder="값입력"/></td>
@@ -162,7 +162,7 @@
           </tr>
           <tr class="adult">
             <td>단체</td>
-            <td class="total"></td>
+            <td class="rowtotal"></td>
             <td><input type="text" class="adult form-control input-sm" placeholder="값입력"/></td>
             <td><input type="text" class="adult form-control input-sm" placeholder="값입력"/></td>
             <td><input type="text" class="adult form-control input-sm" placeholder="값입력"/></td>
@@ -181,7 +181,7 @@
           </tr>
           <tr class="senior">
             <td>개인</td>
-            <td class="total"></td>
+            <td class="rowtotal"></td>
             <td><input type="text" class="senior form-control input-sm" placeholder="값입력"/></td>
             <td><input type="text" class="senior form-control input-sm" placeholder="값입력"/></td>
             <td><input type="text" class="senior form-control input-sm" placeholder="값입력"/></td>
@@ -190,7 +190,7 @@
           </tr>
           <tr class="senior">
             <td>단체</td>
-            <td class="total"></td>
+            <td class="rowtotal"></td>
             <td><input type="text" class="senior form-control input-sm" placeholder="값입력"/></td>
             <td><input type="text" class="senior form-control input-sm" placeholder="값입력"/></td>
             <td><input type="text" class="senior form-control input-sm" placeholder="값입력"/></td>
@@ -209,7 +209,7 @@
           </tr>
           <tr class="foreigner">
             <td>개인</td>
-            <td class="total"></td>
+            <td class="rowtotal"></td>
             <td><input type="text" class="foreigner form-control input-sm" placeholder="값입력"/></td>
             <td><input type="text" class="foreigner form-control input-sm" placeholder="값입력"/></td>
             <td><input type="text" class="foreigner form-control input-sm" placeholder="값입력"/></td>
@@ -218,7 +218,7 @@
           </tr>
           <tr class="foreigner">
             <td>단체</td>
-            <td class="total"></td>
+            <td class="rowtotal"></td>
             <td><input type="text" class="foreigner form-control input-sm" placeholder="값입력"/></td>
             <td><input type="text" class="foreigner form-control input-sm" placeholder="값입력"/></td>
             <td><input type="text" class="foreigner form-control input-sm" placeholder="값입력"/></td>
@@ -241,12 +241,12 @@
     var tbl = $('#inputTable');
     tbl.find('tr').each(function() {
       $(this).find('input[type=text]').on("keyup", function(event) {
-        calculateSum();
+        calculateRowSum();
         calculateColumn(event);
       });
     });
 
-    function calculateSum() {
+    function calculateRowSum() {
       tbl.find('tr').each(function () {
         var sum = 0;
         $(this).find('input[type=text]').each(function() {
@@ -255,31 +255,34 @@
             //alert(this);
           }
         });
-        $(this).find('.total').text(sum);
+        $(this).find('.rowtotal').text(sum);
       });
     }
 
     function calculateColumn(event) {
+      var arrSumOfPerTime = [[0, 0, 0, 0, 0, 0],[0, 0, 0, 0, 0, 0]];
       $childTargetTRs = $('#inputTable tr.child:not(:first)');
-      setColumnValues($childTargetTRs, "child");
+      setSumOfSectionValuesByTimeslots($childTargetTRs, "child", arrSumOfPerTime);
       $teenagerTargetTRs = $('#inputTable tr.teenager:not(:first)');
-      setColumnValues($teenagerTargetTRs, "teenager");
+      setSumOfSectionValuesByTimeslots($teenagerTargetTRs, "teenager", arrSumOfPerTime);
       $adultTargetTRs = $('#inputTable tr.adult:not(:first)');
-      setColumnValues($adultTargetTRs, "adult");
+      setSumOfSectionValuesByTimeslots($adultTargetTRs, "adult", arrSumOfPerTime);
       $seniorTargetTRs = $('#inputTable tr.senior:not(:first)');
-      setColumnValues($seniorTargetTRs, "senior");
+      setSumOfSectionValuesByTimeslots($seniorTargetTRs, "senior", arrSumOfPerTime);
       $foreignerTargetTRs = $('#inputTable tr.foreigner:not(:first)');
-      setColumnValues($foreignerTargetTRs, "foreigner");
-
+      setSumOfSectionValuesByTimeslots($foreignerTargetTRs, "foreigner", arrSumOfPerTime);
+      $totalTargetTRs = $('#inputTable tr.total:not(:first)');
+      setSumOfTotalValuesByTimeslots($totalTargetTRs, "total", arrSumOfPerTime);
+      console.log("test : " +arrSumOfPerTime)
     }
 
-    function setColumnValues($targetTRs, className) {
+    function setSumOfSectionValuesByTimeslots($targetTRs, className, arrSumOfPerTime) {
       $($targetTRs[0]).find('td:not(:first)').each(function() {
-        var $td = $(this);
-        var colTotal = 0;
-        var value = 0;
+        var $td       = $(this);
+        var colTotal  = 0;
+        var value     = 0;
 
-        $targetTRs.each(function() {
+        $targetTRs.each(function(index) {
           $targetTDs = $(this).find('td:not(:first)');
           if ($targetTDs.eq($td.index()-1).children().length > 0) {
             value = parseInt($targetTDs.eq($td.index()-1).find('input[type=text]').get(0).value);
@@ -288,9 +291,25 @@
           }
           if (!isNaN(value) && value.length != 0) {
             colTotal += value;
+            arrSumOfPerTime[index][$td.index()-1] += value;
           }
         });
         $('#inputTable tr.' + className + ' td.sum'+className).eq($td.index()-1).html(colTotal);
+      });
+    }
+
+    function setSumOfTotalValuesByTimeslots($targetTRs, className, arrSumOfPerTime) {
+      var arrTotal = [0, 0, 0, 0, 0, 0];
+      $targetTRs.each(function(row) {
+        var colTotal = 0;
+        $(this).find('td:not(:first)').each(function(column) {
+          $(this).html(arrSumOfPerTime[row][column]);
+          arrTotal[column] += arrSumOfPerTime[row][column];
+        });
+      });
+      console.log(arrTotal);
+      tbl.find('.sumtotal').each(function(index) {
+        $(this).html(arrTotal[index]);
       });
     }
   </script>
