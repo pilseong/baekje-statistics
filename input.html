@@ -263,19 +263,29 @@
       var arrSumOfPerTime = [[0, 0, 0, 0, 0, 0],[0, 0, 0, 0, 0, 0]];
       $childTargetTRs = $('#inputTable tr.child:not(:first)');
       setSumOfSectionValuesByTimeslots($childTargetTRs, "child", arrSumOfPerTime);
+
       $teenagerTargetTRs = $('#inputTable tr.teenager:not(:first)');
       setSumOfSectionValuesByTimeslots($teenagerTargetTRs, "teenager", arrSumOfPerTime);
+
       $adultTargetTRs = $('#inputTable tr.adult:not(:first)');
       setSumOfSectionValuesByTimeslots($adultTargetTRs, "adult", arrSumOfPerTime);
+
       $seniorTargetTRs = $('#inputTable tr.senior:not(:first)');
       setSumOfSectionValuesByTimeslots($seniorTargetTRs, "senior", arrSumOfPerTime);
+
       $foreignerTargetTRs = $('#inputTable tr.foreigner:not(:first)');
       setSumOfSectionValuesByTimeslots($foreignerTargetTRs, "foreigner", arrSumOfPerTime);
+
+      // calcuate total sums of the visitors.
       $totalTargetTRs = $('#inputTable tr.total:not(:first)');
       setSumOfTotalValuesByTimeslots($totalTargetTRs, "total", arrSumOfPerTime);
-      console.log("test : " +arrSumOfPerTime)
     }
 
+    // this function will calculate each column and add this number to the array that has the sum of
+    // each section. the array is a two dimensional and each one hold the data according to group.
+    // $targetTRs are trs with designated section class in the tag.
+    // className is a designated section name.
+    // arrSumOfPerTime is a holder for total values of all.
     function setSumOfSectionValuesByTimeslots($targetTRs, className, arrSumOfPerTime) {
       $($targetTRs[0]).find('td:not(:first)').each(function() {
         var $td       = $(this);
@@ -298,7 +308,11 @@
       });
     }
 
+    // This part of the program will calculate and set total sums.
+    // $targetTRs are trs with total class in the tag.
+    // arrSumOfPerTime is a two dimensional array that has sums of each time slot of each category(individual, group).
     function setSumOfTotalValuesByTimeslots($targetTRs, className, arrSumOfPerTime) {
+      // This array will hold the total sums of the visitors. Second row of this table.
       var arrTotal = [0, 0, 0, 0, 0, 0];
       $targetTRs.each(function(row) {
         var colTotal = 0;
@@ -307,7 +321,8 @@
           arrTotal[column] += arrSumOfPerTime[row][column];
         });
       });
-      console.log(arrTotal);
+
+      // Copy total sums of the visitors divided by time periods.
       tbl.find('.sumtotal').each(function(index) {
         $(this).html(arrTotal[index]);
       });
